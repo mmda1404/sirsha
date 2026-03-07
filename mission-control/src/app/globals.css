@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-meraki-indigo: #2C0B63;
+  --color-meraki-violet: #5C00FF;
+  --color-meraki-gold: #C9A84C;
+  --color-meraki-cream: #F5F0E8;
+  --color-meraki-white: #FAF8F5;
+  --color-surface-dark: #1A0840;
+  --color-surface-mid: #3D1A7A;
+  --color-border-subtle: rgba(74, 32, 144, 0.4);
+  
+  --font-space: var(--font-space-grotesk);
+  --font-inter: var(--font-inter);
+}
+
+:root {
+  --background: #F5F0E8;
+  --foreground: #2C0B63;
+}
+
+.dark {
+  --background: #2C0B63;
+  --foreground: #FAF8F5;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  min-height: 100vh;
+}
+
+/* Glassmorphism Utility */
+.glass {
+  background: rgba(61, 26, 122, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(92, 0, 255, 0.3);
+}
+
+/* Typography Utility */
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-space-grotesk), sans-serif;
+}
