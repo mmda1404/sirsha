@@ -11,7 +11,6 @@ RUN npm install
 # Copy source code and other necessary files
 COPY src/ ./src/
 COPY tsconfig.json .
-COPY .env .env
 COPY mcp.json mcp.json
 # Pinecone and GHL might need credentials if stored in files, but usually they are in .env
 
