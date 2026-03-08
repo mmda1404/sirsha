@@ -30,7 +30,7 @@ import { logAgentEvent } from '../lib/logger.js';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const SOUL_PATH = path.join(__dirname, 'soul.md');
 
-const MAX_ITERATIONS = 5;
+const MAX_ITERATIONS = 10;
 
 // Define available tools (Note: We've migrated to defining them inline for OpenAI schema format below)
 // The original Anthropic tools array is no longer strictly used the same way.
@@ -270,4 +270,3 @@ async function executeLoop(userId: number, messages: any[], primaryModel: string
     saveSessionMessage(userId, "assistant", maxItersReply);
     return { finalReply: maxItersReply, finalModel: primaryModel };
 }
-
